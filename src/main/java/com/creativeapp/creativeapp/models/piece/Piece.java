@@ -27,4 +27,5 @@ public class Piece {
     private int[][] piecePositions = new int[weigth][height];
 
 
+
 }

@@ -13,12 +13,15 @@ public class PieceDAO {
     @Autowired
     private PieceRepository pieceRepository;
 
-    public List<Piece> getAllPieces() {
+    public List<Piece> getAllPieces(){
         List<Piece> pieces = new ArrayList<>();
-        Iterable<Piece> iterable = pieceRepository.findAll();
-        for (Piece piece : iterable) {
-            pieces.add(piece);
-        }
+        Streamable.of(pieceRepository.findAll()).forEach(pieces :: add);
+
         return pieces;
     }
+
+    public void createPiece(Piece piece){
+        pieceRepository.save(piece);
+    }
+
 }

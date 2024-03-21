@@ -2,9 +2,7 @@ package com.creativeapp.creativeapp.models.piece;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,9 +22,9 @@ public class PieceController {
         return repository.getAllPieces();
     }
 
-    @GetMapping(path = "/test")
-    public String test(){
-        return "TEST";
-    }
+   @PostMapping
+    public void createPiece(@RequestBody Piece piece){
+        repository.createPiece(piece);
+   }
 
 }
