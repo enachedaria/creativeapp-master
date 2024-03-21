@@ -21,7 +21,7 @@ public class Puzzle {
     @Column
     private long id;
 
-    @Column
+    @Enumerated(EnumType.STRING)
     private DificultyLevels dificultyLevels;
 
     //@Column

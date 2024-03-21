@@ -14,10 +14,7 @@ public class PieceDAO {
     private PieceRepository pieceRepository;
 
     public List<Piece> getAllPieces(){
-        List<Piece> pieces = new ArrayList<>();
-        Streamable.of(pieceRepository.findAll()).forEach(pieces :: add);
-
-        return pieces;
+        return pieceRepository.findAll();
     }
 
     public void createPiece(Piece piece){

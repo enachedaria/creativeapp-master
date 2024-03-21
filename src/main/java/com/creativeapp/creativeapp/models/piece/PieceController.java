@@ -22,7 +22,7 @@ public class PieceController {
         return repository.getAllPieces();
     }
 
-   @PostMapping
+   @PostMapping(path = "/addPiece")
     public void createPiece(@RequestBody Piece piece){
         repository.createPiece(piece);
    }
