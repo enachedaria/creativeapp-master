@@ -1,4 +1,4 @@
-package com.creativeapp.creativeapp.models.piece;
+package com.creativeapp.creativeapp.models;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -24,7 +24,7 @@ public class Piece {
     @Column
     private int height;
 
-    private int[][] piecePositions = new int[weigth][height];
+    //private int[][] piecePositions = new int[weigth][height];
 
 
 

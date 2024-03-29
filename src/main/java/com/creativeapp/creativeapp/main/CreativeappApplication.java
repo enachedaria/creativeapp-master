@@ -1,4 +1,4 @@
-package com.creativeapp.creativeapp;
+package com.creativeapp.creativeapp.main;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
